@@ -1,15 +1,16 @@
 <!--file:resources/view/html101/blade.php -->
 @extends('template.default')
 @section('title','Workshop Form')
+@section('header','Workshop #Html - Form')
 @section('content')
-    <h1>Workshop #Html - Form</h1>
-        <form>
+        <form method="POST" action="/html-form">
+             @csrf
                 <div class="row mt-3">
                     <div class="col-sm-12 col-md-4">
                      <label for="fname">ชื่อ</label>
                     </div>
                     <div class="col">
-                        <input id="fname" class="form-control">
+                        <input id="fname" name="fname" class="form-control">
                         <div class= "valid-feedback">
                             Looks good!
                         </div>
@@ -24,7 +25,7 @@
                      <label for="lname">สกุล</label>
                     </div>
                     <div class="col">
-                        <input id="lname" class="form-control">
+                        <input id="lname" name="lname"class="form-control">
                         <div class= "valid-feedback">
                             Looks good!
                         </div>
@@ -39,7 +40,7 @@
                      <label for="birthday">วัน/เดือน/ปีเกิด</label>
                     </div>
                     <div class="col">
-                        <input type="date" id="birthday" class="form-control">
+                        <input type="date" id="birthday" name="birthday" class="form-control">
                         <div class= "valid-feedback">
                             Looks good!
                         </div>
@@ -54,7 +55,7 @@
                      <label for="age">อายุ</label>
                     </div>
                     <div class="col">
-                        <input id="age" class="form-control">
+                        <input id="age" name="age" class="form-control">
                         <div class= "valid-feedback">
                             Looks good!
                         </div>
@@ -106,7 +107,7 @@
                      <label for="address">ที่อยู่</label>
                     </div>
                     <div class="col">
-                        <textarea id="address" class="form-control" rows="4"></textarea>
+                        <textarea id="address" name="address" class="form-control" rows="4"></textarea>
                         <div class= "valid-feedback">
                             Looks good!
                         </div>
@@ -121,7 +122,7 @@
                     <label for="color">สีที่ชอบ</label>
                     </div>
                     <div class="col">
-                        <select id="color" class="form-select">
+                        <select id="color" name="color" class="form-select">
                             <option value="">Choose Color</option>
                             <option value="red">สีแดง</option>
                             <option value="yellow">สีเหลือง</option>
@@ -187,7 +188,7 @@
                 <div class="row mt-3">
                     <div class="col">
                         <button type="reset" class="btn btn-light">Reset</button>
-                        <button type="submit" class="btn btn-success ms-2" onclick ="clickme()">Submit</button>
+                        <button type="submit" class="btn btn-success ms-2">Submit</button>
                     </div>
                 </div>
 

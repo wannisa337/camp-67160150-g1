@@ -7,5 +7,12 @@ Route::get('/', function () {
 });
 
 Route ::get('/se',function(){
-    return "<h1>SE BUU</h1>";
+    return view('templatr.default');
 });
+
+//Route::get('/mycontroller',[App\Http\Controllers\MyController::class,'index']);
+//Route::get('/calculate',[App\Http\Controllers\MyController::class,'inFo']);
+//Route::post('/calculate',[App\Http\Controllers\MyController::class,'calculate']);
+Route::post('/html-form',[App\Http\Controllers\MyController::class,'store']);
+Route::get('/html-form',[App\Http\Controllers\MyController::class,'index']);
+
