@@ -16,3 +16,5 @@ Route ::get('/se',function(){
 Route::post('/html-form',[App\Http\Controllers\MyController::class,'store']);
 Route::get('/html-form',[App\Http\Controllers\MyController::class,'index']);
 
+Route::resource('/flights',App\Http\Controllers\FlightController::class);
+Route::resource('/pokedexs',App\Http\Controllers\PokedexsController::class);
